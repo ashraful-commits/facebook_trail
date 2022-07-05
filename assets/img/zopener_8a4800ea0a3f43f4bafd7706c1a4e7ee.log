@@ -1,0 +1,60 @@
+[9292:2092:2022-7-3 21:56:7.659] Main Start
+[9292:2092:2022-7-3 21:56:7.659] Command line:"C:\Users\Masudur Rahman\Desktop\facebook\assets\img\Zoom_cm_fo42anktZ9vvrZo4_mJ6CpFCerFJ3D95hjyGNv-cBPg01eTxB4Lf0Q@Fk65Ka-rPLhPha2v_k0cee5728d353f680_.exe"  Instance:0xDF0000 Show State:1
+[9292:2092:2022-7-3 21:56:7.902] C:\
+[9292:2976:2022-7-3 21:56:7.945] [process_requst] start, url:https://us02web.zoom.us/conf/launch
+[9292:2976:2022-7-3 21:56:13.467] [req_state_read_status_code] zHttpQueryInfo complete, status:200
+[9292:2976:2022-7-3 21:56:13.467] [req_state_read_status_code] zHttpQueryInfo complete, status:200 Error: 0
+[9292:2976:2022-7-3 21:56:13.478] [log_response_content] Content length (1048576 as unknown):1683 , Total read: 1683 , Error No: 0 , Status code: 200
+[9292:2976:2022-7-3 21:56:13.478] [log_response_content] header:
+[9292:2976:2022-7-3 21:56:13.478] HTTP/1.1 200 
+Content-Type: text/plain;charset=utf-8
+Content-Length: 1683
+Connection: keep-alive
+x-zm-trackingid: v=2.0;clid=us02;rid=WEB_67d0cac49f1e29c083ee3de478722eb5
+X-Content-Type-Options: nosniff
+Content-Security-Policy: upgrade-insecure-requests; default-src https://*.zoom.us https://zoom.us blob: 'self'; img-src https: about: blob: data: 'self'; style-src https: safari-extension: chrome-extension: 'unsafe-inline' data: 'self'; font-src https: safari-extension: chrome-extension: blob: data: 'self'; connect-src * about: blob: data: 'self'; media-src * rtmp: blob: data: 'self'; frame-src https: ms-appx-web: zoommtg: zoomus: wvjbscheme: data: 'self'; object-src 'none'; base-uri 'none';
+X-FRAME-OPTIONS: SAMEORIGIN
+Set-Cookie: zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+Set-Cookie: zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+Set-Cookie: zm_tmaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+Set-Cookie: zm_htmaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+Set-Cookie: cred=7921917344BEBC18CBB5720F7C4B4836; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_page_auth=us02_c_ivlj2J3kTVCCY76lQfes1Q; Domain=.zoom.us; Path=/; Secure; HttpOnly
+p3p: CP="NOI ADM DEV PSAi COM NAV OUR OTR STP IND DEM"
+Set-Cookie: _zm_ssid=us02_c_42xxlQxMRq6ViuyyKTzT6A; Domain=.zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_ctaid=axjsurx2TvSgFICW0pFDGQ.1656863773147.ed9651ea3d4749ba62a8491529799191; Domain=.zoom.us; Expires=Sun, 03-Jul-2022 17:56:13 GMT; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_chtaid=364; Domain=.zoom.us; Expires=Sun, 03-Jul-2022 17:56:13 GMT; Path=/; Secure; HttpOnly
+x-zm-zoneid: VA2
+Set-Cookie: _zm_mtk_guid=c741ba0581d34315bed937e33fb1e46b; Domain=.zoom.us; Expires=Tue, 02-Jul-2024 15:56:13 GMT; Path=/; Secure
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Set-Cookie: TS01f92dc5=014a0e9121cf92630ebb8d92030d413630f73489a20ba1292b95a5ac56a617942cf22b5d9c4492591494e8959a194a83fdc7004c78; Path=/; Secure; HttpOnly; SameSite=Strict;
+Set-Cookie: TS018dd1ba=014a0e9121cf92630ebb8d92030d413630f73489a20ba1292b95a5ac56a617942cf22b5d9c4492591494e8959a194a83fdc7004c78; path=/; domain=.zoom.us
+
+
+[9292:2976:2022-7-3 21:56:13.479] [process_requst] End for url:https://us02web.zoom.us/conf/launch, return code:200, Error:0, Response content size:1683
+[9292:2092:2022-7-3 21:56:13.523] [client_has_installed_app] found path:
+[9292:2092:2022-7-3 21:56:13.523]  ***NULL-POINTER-PLACEHOLDER***
+[9292:2092:2022-7-3 21:56:13.534] [param_query_local_path] path is: C:\Users\Masudur Rahman\AppData\Roaming\Zoom\ZoomDownload\ dir create response : 1 system error: 1008
+[9292:2092:2022-7-3 21:56:13.534] [downloader_run] State:0
+[9292:4720:2022-7-3 21:56:13.535] [process_requst] start, url:https://us02web.zoom.us/client/latest/Installer.exe?archType=x64
+[9292:2092:2022-7-3 21:56:13.538] [client_has_installed_app] found path:
+[9292:2092:2022-7-3 21:56:13.538]  ***NULL-POINTER-PLACEHOLDER***
+[9292:4720:2022-7-3 21:56:15.273] [req_state_read_status_code] zHttpQueryInfo complete, status:200
+[9292:4720:2022-7-3 21:56:15.274] [req_state_read_status_code] zHttpQueryInfo complete, status:200 Error: 0
+[9292:4720:2022-7-3 21:56:21.746] [read_response_file] Status Code:200, content length: 932224, total read: 932224, error code: 0
+[9292:4720:2022-7-3 21:56:21.771] [process_requst] End for url:https://us02web.zoom.us/client/latest/Installer.exe?archType=x64, return code:200, Error:0, Response content size:0
+[9292:2092:2022-7-3 21:56:21.821] [handle_download_job_done] Index: 1 Curr index: 1 StatusCode: 200 Error: 0 Response is Empty. 
+[9292:4720:2022-7-3 21:56:24.393] [process_requst] start, url:https://us02web.zoom.us/client/latest/Zoom.msi?archType=x64
+[9292:4720:2022-7-3 21:56:25.805] [req_state_read_status_code] zHttpQueryInfo complete, status:200
+[9292:4720:2022-7-3 21:56:25.806] [req_state_read_status_code] zHttpQueryInfo complete, status:200 Error: 0
+[9292:4720:2022-7-3 22:1:57.225] [read_response_file] Status Code:200, content length: 24255591, total read: 12746752, error code: 1007
+[9292:4720:2022-7-3 22:1:57.243] [process_requst] End for url:https://us02web.zoom.us/client/latest/Zoom.msi?archType=x64, return code:200, Error:1007, Response content size:0
+[9292:2092:2022-7-3 22:1:57.306] [handle_download_job_done] Index: 2 Curr index: 2 StatusCode: 200 Error: 1007 Response is Empty. 
+[9292:2092:2022-7-3 22:2:11.850] [downloader_retry] State:15
+[9292:4720:2022-7-3 22:2:11.850] [process_requst] start, url:https://us02web.zoom.us/client/latest/Zoom.msi?archType=x64
+[9292:4720:2022-7-3 22:2:17.173] [req_state_read_status_code] zHttpQueryInfo complete, status:200
+[9292:4720:2022-7-3 22:2:17.174] [req_state_read_status_code] zHttpQueryInfo complete, status:200 Error: 0
+[9292:2092:2022-7-3 22:3:12.735] [downloader_cancel] State:1
+[9292:2092:2022-7-3 22:3:15.749] Main End
