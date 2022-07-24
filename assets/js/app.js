@@ -18,10 +18,14 @@ const allData = (e) => {
       list += `<li class="my-2 shadow list-group-item">
             <div class="d-flex justify-content-between align-items-center ">
             <div  class="d-flex align-items-center justify-content-start ">
-                <img  style="width: 70px;height:70px" src="${item.user_photo}" alt="user" class=" p-3 border-1 border-dark rounded rounded-circle me-2">
+                <img  style="width: 70px;height:70px" src="${
+                  item.user_photo
+                }" alt="user" class=" p-3 border-1 border-dark rounded rounded-circle me-2">
                 <div class=" mt-4 d-flex flex-column justify-content-start text-start">
                  <p class="mb-0">${item.user_name}</p>
-                 <p class="web_p">2 h <i class="fa-solid fa-earth-americas"></i></p>
+                 <p class="web_p">${timeCounter(
+                   item.post_time
+                 )} <i class="fa-solid fa-earth-americas"></i></p>
                 </div>
             </div>
     
@@ -76,6 +80,13 @@ facbook_form.addEventListener("submit", (e) => {
 
   let form_value = new FormData(e.target);
   let form_data = Object.fromEntries(form_value.entries());
+  let postTime = {
+    post_time: Date.now(),
+  };
+  let finalData = {
+    ...form_data,
+    ...postTime,
+  };
   let { heading, photo, user_name, user_photo } = form_data;
   if (!heading || !photo || !user_name || !user_photo) {
     msg.innerHTML = setAlert("All fields are required");
@@ -86,7 +97,7 @@ facbook_form.addEventListener("submit", (e) => {
     setTimeout(() => {
       loadding.style.display = "none";
       e.target.style.opacity = "1";
-      setDataLs("facebook", form_data);
+      setDataLs("facebook", finalData);
       allData();
       e.target.reset();
     }, 1000);
@@ -142,6 +153,7 @@ output.onclick = (e) => {
             photo,
             user_name,
             user_photo,
+            post_time: Date.now(),
           };
           updataLsData("facebook", lsdata_edit);
           e.target.reset();
