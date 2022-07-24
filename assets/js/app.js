@@ -8,7 +8,7 @@ const allData = (e) => {
   let lsData = getItem("facebook");
   let list = "";
   let date = new Date();
-  // console.log(lsData)
+
   if (!lsData || lsData == "") {
     list = `<h2 class="text-center p-2">No post</h2>`;
   }
