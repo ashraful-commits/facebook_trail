@@ -28,23 +28,21 @@ const getItem = (key) => {
 
 const timeCounter = (postTime) => {
   let currentTime = Date.now();
+
   let timeDiff = currentTime - postTime;
 
-  let totalSecond = Math.floor(timeDiff / 1000);
-  let totalMin = Math.floor(totalSecond / 60);
-  let totalHour = Math.floor(totalMin / 60);
-  let totalDay = Math.floor(totalHour / 24);
+  let TotalSecond = Math.floor(timeDiff / 1000);
+  let Total_min = Math.floor(TotalSecond / 60);
+  let TotalHour = Math.floor(Total_min / 60);
+  let totalDay = Math.floor(TotalHour / 24);
 
-  if (totalSecond <= 59) {
-    return `${totalSecond} sec ago`;
-  }
-  if (totalSecond <= 60 || totalSecond <= 3599) {
-    return `${totalMin} min ago`;
-  }
-  if (totalSecond >= 3600 || totalSecond <= 86399) {
-    return `${totalHour} hour ago`;
-  }
-  if (totalSecond >= 86400) {
+  if (TotalSecond <= 59) {
+    return `${TotalSecond} sec ago`;
+  } else if (TotalSecond >= 60 && TotalSecond <= 3599) {
+    return `${Total_min} min ago`;
+  } else if (TotalSecond >= 3600 && TotalSecond <= 86399) {
+    return `${TotalHour} hour ago`;
+  } else if (TotalSecond >= 86400) {
     return `${totalDay} day ago`;
   }
 };
