@@ -113,10 +113,11 @@ output.onclick = (e) => {
   e.preventDefault();
 
   if (e.target.classList.contains("delete")) {
+    let index = e.target.getAttribute("serial");
+    let lsdata_delete = getItem("facebook");
     modelId.onclick = (e) => {
       e.preventDefault();
-      let index = e.target.getAttribute("serial");
-      let lsdata_delete = getItem("facebook");
+
       if (e.target.classList.contains("yes")) {
         const finalDataDelete = lsdata_delete.filter((data) => {
           if (data.post_time != index) {
