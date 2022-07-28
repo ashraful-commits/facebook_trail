@@ -132,14 +132,17 @@ output.onclick = (e) => {
     const poto_edit = document.getElementById("photo");
     const user_name_edit = document.getElementById("user_name");
     const user_photo_edit = document.getElementById("user_photo");
-    let { heading, photo, user_name, user_photo } = lsdata_edit[index];
+    lsdata_edit.find((data) => {
+      if (data.post_time == index) {
+        user_i.src = data.user_photo;
+        user_n.innerHTML = data.user_name;
+        heading_edit.value = data.heading;
+        poto_edit.value = data.photo;
+        user_name_edit.value = data.user_name;
+        user_photo_edit.value = data.user_photo;
+      }
+    });
 
-    user_i.src = user_photo;
-    user_n.innerHTML = user_name;
-    heading_edit.value = heading;
-    poto_edit.value = photo;
-    user_name_edit.value = user_name;
-    user_photo_edit.value = user_photo;
     console.log(index);
     facbook_edit.addEventListener("submit", (e) => {
       e.preventDefault();
