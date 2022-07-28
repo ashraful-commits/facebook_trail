@@ -3,6 +3,7 @@ const msg = document.querySelector(".msg");
 const output = document.getElementById("output");
 const loadding = document.querySelector(".loadding");
 const loadding_save = document.querySelector(".loadding_save");
+const modelId = document.getElementById("modelId");
 
 const allData = (e) => {
   let lsData = getItem("facebook");
@@ -38,7 +39,7 @@ const allData = (e) => {
                     <li><a class="dropdown-item edit"  serial="${
                       item.post_time
                     }" href="#"  data-bs-target="#edit_form" data-bs-toggle="modal">Edit</a></li>
-                    <li><a class="dropdown-item delete"  serial="${
+                    <li><a class="dropdown-item delete" data-bs-target="#modelId" data-bs-toggle="modal"  serial="${
                       item.post_time
                     }" href="#">Delete</a></li>
                 </ul>
@@ -112,19 +113,23 @@ output.onclick = (e) => {
   e.preventDefault();
 
   if (e.target.classList.contains("delete")) {
-    let con = confirm("Do you want to delete ?");
-    if (con == true) {
+    modelId.onclick = (e) => {
+      e.preventDefault();
       let index = e.target.getAttribute("serial");
       let lsdata_delete = getItem("facebook");
-      const finalDataDelete = lsdata_delete.filter((data) => {
-        if (data.post_time != index) {
-          return data;
-        }
-      });
+      if (e.target.classList.contains("yes")) {
+        const finalDataDelete = lsdata_delete.filter((data) => {
+          if (data.post_time != index) {
+            return data;
+          }
+        });
 
-      updataLsData("facebook", finalDataDelete);
-      allData();
-    }
+        updataLsData("facebook", finalDataDelete);
+        allData();
+      } else {
+        return false;
+      }
+    };
   }
   if (e.target.classList.contains("edit")) {
     let index = e.target.getAttribute("serial");
