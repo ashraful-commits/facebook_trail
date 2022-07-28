@@ -150,6 +150,16 @@ output.onclick = (e) => {
       let form_value = new FormData(e.target);
       let form_data = Object.fromEntries(form_value.entries());
       let { heading, photo, user_name, user_photo } = form_data;
+      let postTime = {
+        post_time: Date.now(),
+      };
+
+      let afterEditData = {
+        ...form_data,
+        ...postTime,
+      };
+      // final edit data
+      lsdata_edit.push(afterEditData);
 
       if (!heading || !photo || !user_name || !user_photo) {
         msg.innerHTML = setAlert("All fields are required");
@@ -160,6 +170,8 @@ output.onclick = (e) => {
         setTimeout(() => {
           e.target.style.opacity = "1";
           loadding_save.style.display = "none";
+
+          // data filter
           let finalEditData = lsdata_edit.filter((data) => {
             if (data.post_time != index) {
               return data;
