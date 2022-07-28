@@ -32,7 +32,7 @@ const allData = (e) => {
     
               <div class="dropdown dropdown-menu-start">
                 <button class="btn btn-secondary dropdown-toggle btn-group dropstart" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-ellipsis h1"></i>
+                <i class="fa-solid fa-ellipsis"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item view" serial="${index}" href="#">View</a></li>
