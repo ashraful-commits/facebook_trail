@@ -112,16 +112,19 @@ output.onclick = (e) => {
   e.preventDefault();
 
   if (e.target.classList.contains("delete")) {
-    let index = e.target.getAttribute("serial");
-    let lsdata_delete = getItem("facebook");
-    const finalDataDelete = lsdata_delete.filter((data) => {
-      if (data.post_time != index) {
-        return data;
-      }
-    });
+    let con = confirm("Do you want to delete ?");
+    if (con == true) {
+      let index = e.target.getAttribute("serial");
+      let lsdata_delete = getItem("facebook");
+      const finalDataDelete = lsdata_delete.filter((data) => {
+        if (data.post_time != index) {
+          return data;
+        }
+      });
 
-    updataLsData("facebook", finalDataDelete);
-    allData();
+      updataLsData("facebook", finalDataDelete);
+      allData();
+    }
   }
   if (e.target.classList.contains("edit")) {
     let index = e.target.getAttribute("serial");
