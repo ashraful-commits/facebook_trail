@@ -35,8 +35,12 @@ const allData = (e) => {
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item view" serial="${index}" href="#">View</a></li>
-                    <li><a class="dropdown-item edit"  serial="${index}" href="#"  data-bs-target="#edit_form" data-bs-toggle="modal">Edit</a></li>
-                    <li><a class="dropdown-item delete"  serial="${index}" href="#">Delete</a></li>
+                    <li><a class="dropdown-item edit"  serial="${
+                      item.post_time
+                    }" href="#"  data-bs-target="#edit_form" data-bs-toggle="modal">Edit</a></li>
+                    <li><a class="dropdown-item delete"  serial="${
+                      item.post_time
+                    }" href="#">Delete</a></li>
                 </ul>
                 </div>
             </div>
@@ -110,8 +114,13 @@ output.onclick = (e) => {
   if (e.target.classList.contains("delete")) {
     let index = e.target.getAttribute("serial");
     let lsdata_delete = getItem("facebook");
-    lsdata_delete.splice(index, 1);
-    updataLsData("facebook", lsdata_delete);
+    const finalDataDelete = lsdata_delete.filter((data) => {
+      if (data.post_time != index) {
+        return data;
+      }
+    });
+
+    updataLsData("facebook", finalDataDelete);
     allData();
   }
   if (e.target.classList.contains("edit")) {
@@ -148,14 +157,12 @@ output.onclick = (e) => {
         setTimeout(() => {
           e.target.style.opacity = "1";
           loadding_save.style.display = "none";
-          lsdata_edit[index] = {
-            heading,
-            photo,
-            user_name,
-            user_photo,
-            post_time: Date.now(),
-          };
-          updataLsData("facebook", lsdata_edit);
+          let finalEditData = lsdata_edit.filter((data) => {
+            if (data.post_time != index) {
+              return data;
+            }
+          });
+          updataLsData("facebook", finalEditData);
           e.target.reset();
           allData();
         }, 1000);
